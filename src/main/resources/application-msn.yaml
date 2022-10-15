@@ -1,0 +1,24 @@
+spring:
+  #Mail config
+  mail:
+    host: "${SMTP_SERVER:smtp.office365.com}"
+    port: "${SMTP_PORT:587}"
+    username: "${MAIL_USERNAME:00}"
+    password: "${MAIL_PASSWORD:00}"
+    smtp:
+      ehlo: true
+    properties:
+      timeout: 10000
+      connection:
+        timeout: 10000
+      mail:
+        test-connection: true
+        transport:
+          protocol: "${MAIL_TRANSPORT_PROTOCOL:smtp}"
+        smtp:
+          ssl:
+            trust: "${SSL_TRUST:smtp.office365.com}"
+          auth: "${SMTP_AUTH_ENABLE:true}"
+          starttls:
+            enable: "${SMTP_STARTTLS_ENABLE:true}"
+            required: "${SMTP_STARTTLS_REQUIRED:true}"
