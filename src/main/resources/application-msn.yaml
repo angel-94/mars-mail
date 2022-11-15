@@ -16,8 +16,8 @@ spring:
         transport:
           protocol: "${MAIL_TRANSPORT_PROTOCOL:smtp}"
         smtp:
-          ssl:
-            trust: "${SSL_TRUST:smtp.office365.com}"
+#          ssl:
+#            trust: "${SSL_TRUST:smtp.office365.com}"
           auth: "${SMTP_AUTH_ENABLE:true}"
           starttls:
             enable: "${SMTP_STARTTLS_ENABLE:true}"
